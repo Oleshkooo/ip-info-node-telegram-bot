@@ -1,7 +1,7 @@
 // requirements
-import dotenv from 'dotenv'
-import { Telegraf } from 'Telegraf'
-import axios from 'axios'
+const dotenv = require('dotenv')
+const { Telegraf } = require('Telegraf')
+const axios = require('axios')
 
 dotenv.config()
 const TOKEN = process.env.TOKEN
