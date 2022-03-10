@@ -1,7 +1,11 @@
+// console fixes
+process.env.NTBA_FIX_319 = 1
+process.env.NTBA_FIX_350 = 1
+
 // requirements
-const dotenv = require('dotenv')
-const { Telegraf } = require('Telegraf')
-const axios = require('axios')
+import dotenv from 'dotenv'
+import { Telegraf } from 'telegraf'
+import axios from 'axios'
 
 dotenv.config()
 const TOKEN = process.env.TOKEN
