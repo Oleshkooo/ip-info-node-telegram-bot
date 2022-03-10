@@ -26,7 +26,7 @@ bot.start(async tg => {
 // help
 bot.command('help', async tg => {
     await tg.reply('Send me the IP-adress to start')
-    await tg.reply('How to get IP-adress?')
+    await tg.reply('How to get an IP-adress?')
     await tg.replyWithHTML('<a href="https://iplogger.org/invisible/"><strong>Click here</strong></a> and follow my steps', {disable_web_page_preview: true})
     await tg.reply('Firstly, you have to generate your IPLogger')
     await tg.replyWithPhoto({source: './static/img1.png'})
@@ -63,7 +63,7 @@ bot.on('text', async tg => {
         `)
 
         // google maps
-        tg.replyWithHTML(`<a href="https://www.google.com/maps/search/${info.lat},${info.lon}"><strong>View location on Google Maps</strong></a>`, {disable_web_page_preview: true})
+        await tg.replyWithHTML(`<a href="https://www.google.com/maps/search/${info.lat},${info.lon}"><strong>View location on Google Maps</strong></a>`, {disable_web_page_preview: true})
     }
     catch (e) {
         console.error(e)
